@@ -11,6 +11,10 @@ class Option extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name'
+    ];
+
     public function pool(): BelongsTo
     {
         return $this->belongsTo(Pool::class);

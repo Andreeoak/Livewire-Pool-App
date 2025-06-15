@@ -1,8 +1,7 @@
 <div>
-    <form>
+    <form wire:submit.prevent="createPoll" class="flex flex-col gap-4">
         <label>Poll Title</label>
         <input type="text" wire:model.live="title"/>
-        Current title: {{ $title }}
 
         <div class="mb-4">
             <button wire:click.prevent="addOption" class="btn mb-4">Add Option</button>
@@ -18,8 +17,11 @@
                         <button class = "btn mb-4" wire:click.prevent="removeOption({{ $index }})">Remove</button>
                     <div>
                 </div>
-
             @endforeach
         </div>
+
+        <button type="submit" class="btn">
+            Create Poll
+        </button>
     </form>
 </div>
