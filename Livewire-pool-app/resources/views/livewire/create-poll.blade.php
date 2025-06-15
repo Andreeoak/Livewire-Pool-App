@@ -3,6 +3,10 @@
         <label>Poll Title</label>
         <input type="text" wire:model.live="title"/>
 
+        @error('title')
+            <div class="text-red-500"> {{ $message }}</div>
+        @enderror
+
         <div class="mb-4">
             <button wire:click.prevent="addOption" class="btn mb-4">Add Option</button>
         <div>
@@ -16,6 +20,9 @@
                         <input type="text" wire:model= "options.{{$index}}"/>
                         <button class = "btn mb-4" wire:click.prevent="removeOption({{ $index }})">Remove</button>
                     <div>
+                    @error("options.{$index}")
+                        <div class="text-red-500"> {{ $message }}</div>
+                    @enderror
                 </div>
             @endforeach
         </div>
