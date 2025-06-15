@@ -1,4 +1,4 @@
-<!DOCTYPE html>Add commentMore actions
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -34,6 +34,8 @@
 
 <body class="container mx-auto mt-10 mb-10 max-w-lg">
   @livewireScripts
+
+  @livewire('create-poll')
 </body>
 
 </html>
