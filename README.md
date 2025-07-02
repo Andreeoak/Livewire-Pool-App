@@ -43,7 +43,7 @@ A real-time voting application built with **Laravel 11** and **Livewire 3**, whe
 
 ```bash
 git clone https://github.com/yourusername/livewire-voting-app.git
-cd livewire-voting-app
+cd Livewire-pool-app
 composer install
 cp .env.example .env
 php artisan key:generate
